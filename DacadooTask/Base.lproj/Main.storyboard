@@ -10,7 +10,9 @@
         <scene sceneID="Tde-vc-4j5">
             <objects>
                 <navigationController id="3Yl-IE-nyK" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Nam-eW-0LE">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nam-eW-0LE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,7 +43,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11i-Ub-9FH">
                                 <subviews>
-                                    <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pBf-g2-7ZX">
+                                    <searchBar contentMode="redraw" placeholder="Enter tag" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pBf-g2-7ZX">
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="barTintColor" red="0.56862745100000001" green="0.77647058820000003" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -90,7 +92,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="activityIndicator" destination="gTl-v5-wUR" id="BA9-ek-Woa"/>
-                                            <outlet property="heightPhotoImage" destination="aZO-TM-g0w" id="tfR-6P-XsS"/>
+                                            <outlet property="heightPhotoImage" destination="aZO-TM-g0w" id="oFn-TK-lYn"/>
                                             <outlet property="photoImage" destination="Ckw-df-UCj" id="vR5-30-X59"/>
                                             <segue destination="FHJ-aV-sOc" kind="show" identifier="openPhoto" id="ivi-oG-xTb"/>
                                         </connections>

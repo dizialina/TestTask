@@ -35,24 +35,33 @@ class PhotoTableViewController: UIViewController, UITableViewDataSource, UITable
         
         print("Need to download \(arrayOfSubarrays.count) parts of response photos array")
         
-        // Download images for every part
-        for arrayOfPhotoItems in arrayOfSubarrays {
+        if arrayOfSubarrays.count > 0 {
+            // Download images for every part
+            for arrayOfPhotoItems in arrayOfSubarrays {
             
-            // Parse server items to photo objects and add them to table view
-            let receivedSearchedPhotoArray = PhotoItemsParser().parsePhotoItemsToModel(itemsArray: arrayOfPhotoItems)
-            searchedPhotoArray += receivedSearchedPhotoArray
-            self.tableView.reloadData()
+                // Parse server items to photo objects and add them to table view
+                let receivedSearchedPhotoArray = PhotoItemsParser().parsePhotoItemsToModel(itemsArray: arrayOfPhotoItems)
+                searchedPhotoArray += receivedSearchedPhotoArray
+                // Now we have portion of photo objects and can set number of cells and cell height
+                self.tableView.reloadData()
             
-            // Download image from server for every photo objects and update table view, when every single photo is load
-            let serverManager = ServerManager()
-            serverManager.downloadImageFromURL(searchedPhotos: receivedSearchedPhotoArray, completionHandler: { (isSuccess) in
-                if isSuccess {
-                    // Update table view on main thread
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
+                // Download image from server for every photo objects and update table view, when every single photo is load
+                let serverManager = ServerManager()
+                serverManager.downloadImageFromURL(searchedPhotos: receivedSearchedPhotoArray, completionHandler: { (isSuccess) in
+                    if isSuccess {
+                        // Update table view on main thread
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
                     }
-                }
-            })
+                })
+            }
+        } else {
+            // Show alert if there is no posts with selected tag
+            let alertController = UIAlertController(title: nil, message: "No matches found", preferredStyle: UIAlertControllerStyle.alert)
+            let cancelAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     
@@ -133,6 +142,10 @@ class PhotoTableViewController: UIViewController, UITableViewDataSource, UITable
         } else {
             return minimumRowHeight
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     // MARK: Segue

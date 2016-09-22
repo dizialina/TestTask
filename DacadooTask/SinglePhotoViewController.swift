@@ -41,7 +41,7 @@ class SinglePhotoViewController: UIViewController {
                     } else {
                         // Show alert if image was not loaded
                         self.activityIndicator.stopAnimating()
-                        let alertController = UIAlertController(title: nil, message: "Ошибка при загрузке фотографии", preferredStyle: UIAlertControllerStyle.alert)
+                        let alertController = UIAlertController(title: nil, message: "Error loading photo", preferredStyle: UIAlertControllerStyle.alert)
                         let cancelAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
                         alertController.addAction(cancelAction)
                         self.present(alertController, animated: true, completion: nil)

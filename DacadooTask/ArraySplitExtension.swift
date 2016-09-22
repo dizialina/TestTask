@@ -23,14 +23,16 @@ extension Array {
         
         // Slice array into parts
         var arrayOfSubarrays = [Array]()
-        let lastIndex = numberOfElements
-        for _ in 1...numberOfPossibleSubarrays {
-            if self.count > lastIndex {
-                let subarray = self.prefix(upTo: lastIndex)
-                arrayOfSubarrays.append(Array(subarray))
-                self.removeSubrange(0..<lastIndex)
-            } else {
-                arrayOfSubarrays.append(self)
+        if numberOfPossibleSubarrays > 0 {
+            let lastIndex = numberOfElements
+            for _ in 1...numberOfPossibleSubarrays {
+                if self.count > lastIndex {
+                    let subarray = self.prefix(upTo: lastIndex)
+                    arrayOfSubarrays.append(Array(subarray))
+                    self.removeSubrange(0..<lastIndex)
+                } else {
+                    arrayOfSubarrays.append(self)
+                }
             }
         }
         
