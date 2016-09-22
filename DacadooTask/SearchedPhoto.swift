@@ -15,12 +15,12 @@ class SearchedPhoto: NSObject {
     var photoFullSize:UIImage?
     var photoCutSize:UIImage?
     var cutSizeHeight:CGFloat?
+    var authorBlogName:String?
     
     init(photoStringURL:String, cutSizeHeight:CGFloat) {
         self.cutSizeHeight = cutSizeHeight
         if let photoURL = URL(string: photoStringURL) {
             self.photoStringURL = photoURL
         }
-    }
-    
+    }    
 }

@@ -37,6 +37,12 @@ class PhotoItemsParser: NSObject {
                             
                             // Create searched photo object
                             let searchedPhoto = SearchedPhoto(photoStringURL: formattedStringURL, cutSizeHeight: cutSizeRect.height)
+                            
+                            // Write author blog name if it exists in response
+                            if let authorBlogName = item["blog_name"] as? String {
+                                searchedPhoto.authorBlogName = authorBlogName
+                            }
+                            
                             searchedPhotoArray.append(searchedPhoto)
                         }
                     }

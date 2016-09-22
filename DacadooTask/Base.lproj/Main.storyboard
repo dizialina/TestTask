@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="-354" y="130"/>
         </scene>
-        <!--Photo Table View Controller-->
+        <!--Tumblr Search-->
         <scene sceneID="08h-t9-sMn">
             <objects>
                 <viewController id="Qaa-tx-4UG" customClass="PhotoTableViewController" customModule="DacadooTask" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,6 +83,7 @@
                                             <outlet property="activityIndicator" destination="gTl-v5-wUR" id="BA9-ek-Woa"/>
                                             <outlet property="heightPhotoImage" destination="aZO-TM-g0w" id="tfR-6P-XsS"/>
                                             <outlet property="photoImage" destination="Ckw-df-UCj" id="vR5-30-X59"/>
+                                            <segue destination="FHJ-aV-sOc" kind="show" identifier="openPhoto" id="ivi-oG-xTb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -103,7 +104,7 @@
                             <constraint firstAttribute="trailing" secondItem="vz2-3v-thR" secondAttribute="trailing" id="sYP-0N-CTa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="YkA-au-rI2"/>
+                    <navigationItem key="navigationItem" title="Tumblr Search" id="swg-T6-SAk"/>
                     <connections>
                         <outlet property="searchBar" destination="pBf-g2-7ZX" id="vvK-Ql-2Ud"/>
                         <outlet property="tableView" destination="vz2-3v-thR" id="mdt-oN-jJ6"/>
@@ -112,6 +113,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfe-Q8-hsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="386.39999999999998" y="126.38680659670166"/>
+        </scene>
+        <!--Photo-->
+        <scene sceneID="eHo-ab-GKp">
+            <objects>
+                <viewController id="FHJ-aV-sOc" customClass="SinglePhotoViewController" customModule="DacadooTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RWd-Gx-j2L"/>
+                        <viewControllerLayoutGuide type="bottom" id="oaH-j2-tpi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xFD-hY-7Kj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rz6-nA-LLE"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Vuy-Pw-KEc">
+                                <color key="color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Rz6-nA-LLE" secondAttribute="trailing" id="3lX-9W-mex"/>
+                            <constraint firstItem="oaH-j2-tpi" firstAttribute="top" secondItem="Rz6-nA-LLE" secondAttribute="bottom" id="NA2-0R-Dhh"/>
+                            <constraint firstItem="Vuy-Pw-KEc" firstAttribute="centerY" secondItem="Rz6-nA-LLE" secondAttribute="centerY" id="OTo-aL-EG9"/>
+                            <constraint firstItem="Rz6-nA-LLE" firstAttribute="top" secondItem="RWd-Gx-j2L" secondAttribute="bottom" id="eX2-lr-oIC"/>
+                            <constraint firstItem="Vuy-Pw-KEc" firstAttribute="centerX" secondItem="Rz6-nA-LLE" secondAttribute="centerX" id="tvi-Bi-MtQ"/>
+                            <constraint firstItem="Rz6-nA-LLE" firstAttribute="leading" secondItem="xFD-hY-7Kj" secondAttribute="leading" id="zGL-ee-Rmr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photo" id="Gah-xt-o6W"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Vuy-Pw-KEc" id="jG1-GN-wmU"/>
+                        <outlet property="imageView" destination="Rz6-nA-LLE" id="YC3-Xw-1ez"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fCN-bk-WAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096.8" y="125.4872563718141"/>
         </scene>
     </scenes>
 </document>

@@ -17,6 +17,7 @@
 		034430511D93C39C000723A1 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034430501D93C39C000723A1 /* ServerManager.swift */; };
 		034430531D93D52B000723A1 /* PhotoItemsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034430521D93D52B000723A1 /* PhotoItemsParser.swift */; };
 		034430551D93D62D000723A1 /* ArraySplitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034430541D93D62D000723A1 /* ArraySplitExtension.swift */; };
+		034430591D93F283000723A1 /* SinglePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034430581D93F283000723A1 /* SinglePhotoViewController.swift */; };
 		BB0C800E81823754C4B5FB8D /* Pods_DacadooTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DC78318039B343D6B02C1F /* Pods_DacadooTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		034430501D93C39C000723A1 /* ServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 		034430521D93D52B000723A1 /* PhotoItemsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoItemsParser.swift; sourceTree = "<group>"; };
 		034430541D93D62D000723A1 /* ArraySplitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArraySplitExtension.swift; sourceTree = "<group>"; };
+		034430581D93F283000723A1 /* SinglePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePhotoViewController.swift; sourceTree = "<group>"; };
 		2C51B7C71665F5E4F885E560 /* Pods-DacadooTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DacadooTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-DacadooTask/Pods-DacadooTask.release.xcconfig"; sourceTree = "<group>"; };
 		8DF2856FA68C61EE9EABBAB4 /* Pods-DacadooTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DacadooTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DacadooTask/Pods-DacadooTask.debug.xcconfig"; sourceTree = "<group>"; };
 		A7DC78318039B343D6B02C1F /* Pods_DacadooTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DacadooTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 				034430501D93C39C000723A1 /* ServerManager.swift */,
 				0344304E1D93C14D000723A1 /* SearchedPhoto.swift */,
 				034430541D93D62D000723A1 /* ArraySplitExtension.swift */,
+				034430581D93F283000723A1 /* SinglePhotoViewController.swift */,
 				034430521D93D52B000723A1 /* PhotoItemsParser.swift */,
 				0344303F1D93BC04000723A1 /* Assets.xcassets */,
 				0344304C1D93C041000723A1 /* PhotoTableViewController.swift */,
@@ -232,6 +235,7 @@
 				0344304F1D93C14D000723A1 /* SearchedPhoto.swift in Sources */,
 				0344304B1D93BF66000723A1 /* PhotoCell.swift in Sources */,
 				0344304D1D93C041000723A1 /* PhotoTableViewController.swift in Sources */,
+				034430591D93F283000723A1 /* SinglePhotoViewController.swift in Sources */,
 				034430531D93D52B000723A1 /* PhotoItemsParser.swift in Sources */,
 				034430391D93BC04000723A1 /* AppDelegate.swift in Sources */,
 			);
