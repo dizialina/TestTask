@@ -19,7 +19,7 @@ class SinglePhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Show blog title in navigation item
+        // Show author blog title in navigation item
         if let authorBlogName = searchedPhoto?.authorBlogName {
             self.navigationItem.title = authorBlogName
         }
@@ -38,6 +38,13 @@ class SinglePhotoViewController: UIViewController {
                             self.activityIndicator.stopAnimating()
                             self.imageView.image = self.searchedPhoto?.photoFullSize
                         }
+                    } else {
+                        // Show alert if image was not loaded
+                        self.activityIndicator.stopAnimating()
+                        let alertController = UIAlertController(title: nil, message: "Ошибка при загрузке фотографии", preferredStyle: UIAlertControllerStyle.alert)
+                        let cancelAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+                        alertController.addAction(cancelAction)
+                        self.present(alertController, animated: true, completion: nil)
                     }
                 })
             }

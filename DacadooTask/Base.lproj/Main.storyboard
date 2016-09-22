@@ -10,9 +10,14 @@
         <scene sceneID="Tde-vc-4j5">
             <objects>
                 <navigationController id="3Yl-IE-nyK" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nam-eW-0LE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Nam-eW-0LE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.56862745100000001" green="0.77647058820000003" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Qaa-tx-4UG" kind="relationship" relationship="rootViewController" id="AuP-QP-2Ji"/>
@@ -37,6 +42,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11i-Ub-9FH">
                                 <subviews>
                                     <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pBf-g2-7ZX">
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="barTintColor" red="0.56862745100000001" green="0.77647058820000003" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="Qaa-tx-4UG" id="HbC-cp-rUx"/>
@@ -52,8 +59,10 @@
                                     <constraint firstAttribute="trailing" secondItem="pBf-g2-7ZX" secondAttribute="trailing" id="qfr-mC-vLH"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vz2-3v-thR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vz2-3v-thR">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.56862745100000001" green="0.77647058820000003" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PhotoCell" rowHeight="79" id="pAy-Dc-Hvc" customClass="PhotoCell" customModule="DacadooTask" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="79"/>
@@ -74,7 +83,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="gTl-v5-wUR" firstAttribute="centerX" secondItem="Ckw-df-UCj" secondAttribute="centerX" id="KEH-ys-GdT"/>
-                                                <constraint firstItem="Ckw-df-UCj" firstAttribute="leading" secondItem="i4u-Rl-PsR" secondAttribute="leading" constant="8" id="d9D-Qj-duu"/>
+                                                <constraint firstItem="Ckw-df-UCj" firstAttribute="centerX" secondItem="i4u-Rl-PsR" secondAttribute="centerX" id="cRJ-Ep-CLN"/>
                                                 <constraint firstItem="Ckw-df-UCj" firstAttribute="centerY" secondItem="i4u-Rl-PsR" secondAttribute="centerY" id="gan-NU-jsj"/>
                                                 <constraint firstItem="gTl-v5-wUR" firstAttribute="centerY" secondItem="Ckw-df-UCj" secondAttribute="centerY" id="j2s-3g-hqe"/>
                                             </constraints>
@@ -104,7 +113,9 @@
                             <constraint firstAttribute="trailing" secondItem="vz2-3v-thR" secondAttribute="trailing" id="sYP-0N-CTa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tumblr Search" id="swg-T6-SAk"/>
+                    <navigationItem key="navigationItem" title="Tumblr Search" id="swg-T6-SAk">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="L2B-rP-e3d"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="pBf-g2-7ZX" id="vvK-Ql-2Ud"/>
                         <outlet property="tableView" destination="vz2-3v-thR" id="mdt-oN-jJ6"/>

@@ -75,18 +75,58 @@
 			children = (
 				034430381D93BC04000723A1 /* AppDelegate.swift */,
 				0344303C1D93BC04000723A1 /* Main.storyboard */,
-				034430501D93C39C000723A1 /* ServerManager.swift */,
-				0344304E1D93C14D000723A1 /* SearchedPhoto.swift */,
-				034430541D93D62D000723A1 /* ArraySplitExtension.swift */,
-				034430581D93F283000723A1 /* SinglePhotoViewController.swift */,
-				034430521D93D52B000723A1 /* PhotoItemsParser.swift */,
-				0344303F1D93BC04000723A1 /* Assets.xcassets */,
-				0344304C1D93C041000723A1 /* PhotoTableViewController.swift */,
-				034430411D93BC04000723A1 /* LaunchScreen.storyboard */,
-				0344304A1D93BF66000723A1 /* PhotoCell.swift */,
+				0344305A1D93F8F8000723A1 /* ViewControllers */,
+				0344305E1D93F928000723A1 /* Managers */,
+				0344305C1D93F90E000723A1 /* ObjectModels */,
+				0344305B1D93F902000723A1 /* Extensions */,
+				0344305D1D93F91E000723A1 /* Cells */,
 				034430441D93BC04000723A1 /* Info.plist */,
+				0344303F1D93BC04000723A1 /* Assets.xcassets */,
+				034430411D93BC04000723A1 /* LaunchScreen.storyboard */,
 			);
 			path = DacadooTask;
+			sourceTree = "<group>";
+		};
+		0344305A1D93F8F8000723A1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0344304C1D93C041000723A1 /* PhotoTableViewController.swift */,
+				034430581D93F283000723A1 /* SinglePhotoViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0344305B1D93F902000723A1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				034430541D93D62D000723A1 /* ArraySplitExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		0344305C1D93F90E000723A1 /* ObjectModels */ = {
+			isa = PBXGroup;
+			children = (
+				0344304E1D93C14D000723A1 /* SearchedPhoto.swift */,
+			);
+			name = ObjectModels;
+			sourceTree = "<group>";
+		};
+		0344305D1D93F91E000723A1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0344304A1D93BF66000723A1 /* PhotoCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		0344305E1D93F928000723A1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				034430501D93C39C000723A1 /* ServerManager.swift */,
+				034430521D93D52B000723A1 /* PhotoItemsParser.swift */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 		84D1662727A712FB5ABE6959 /* Pods */ = {

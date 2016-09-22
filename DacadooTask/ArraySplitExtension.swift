@@ -30,7 +30,7 @@ extension Array {
                 arrayOfSubarrays.append(Array(subarray))
                 self.removeSubrange(0..<lastIndex)
             } else {
-                arrayOfSubarrays.append(Array(self))
+                arrayOfSubarrays.append(self)
             }
         }
         

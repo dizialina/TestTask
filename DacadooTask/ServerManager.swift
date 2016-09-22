@@ -29,7 +29,7 @@ class ServerManager: NSObject {
             //print(responseObject)
             if let response = responseObject as? [String:AnyObject] {
                 if let itemsArray = response["response"] as? [AnyObject] {
-                    print("Success. Server returned \(itemsArray.count) photos")
+                    print("Success. Server returned \(itemsArray.count) posts with photos")
                     success(itemsArray)
                 }
             } else {

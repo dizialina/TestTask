@@ -110,7 +110,7 @@ class PhotoTableViewController: UIViewController, UITableViewDataSource, UITable
             }
         }
         
-        // Check if image was loaded and show if it is
+        // Check if image was loaded and show if it was
         if searchedPhoto.photoCutSize != nil {
             photoCell.activityIndicator.stopAnimating()
             photoCell.imageView?.image = searchedPhoto.photoCutSize
@@ -125,9 +125,10 @@ class PhotoTableViewController: UIViewController, UITableViewDataSource, UITable
         let minimumImageHeight:CGFloat = 60.0
         let minimumRowHeight:CGFloat = 79.0
         
-        if let cutSizeHeight = searchedPhoto.cutSizeHeight {
-            guard cutSizeHeight > minimumImageHeight else { return minimumRowHeight }
-            let delta = cutSizeHeight - minimumImageHeight
+        // Resize cell height according to image height in 300 px width
+        if let cutPhotoSizeHeight = searchedPhoto.cutSizeHeight {
+            guard cutPhotoSizeHeight > minimumImageHeight else { return minimumRowHeight }
+            let delta = cutPhotoSizeHeight - minimumImageHeight
             return minimumRowHeight + delta
         } else {
             return minimumRowHeight
@@ -143,9 +144,5 @@ class PhotoTableViewController: UIViewController, UITableViewDataSource, UITable
             let indexPath = tableView.indexPathForSelectedRow
             viewController.searchedPhoto = searchedPhotoArray[(indexPath?.row)!]
         }
-        
     }
-
-    
-    
 }
