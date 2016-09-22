@@ -41,6 +41,7 @@ class PhotoTableViewController: UIViewController, UITableViewDataSource, UITable
             
                 // Parse server items to photo objects and add them to table view
                 let receivedSearchedPhotoArray = PhotoItemsParser().parsePhotoItemsToModel(itemsArray: arrayOfPhotoItems)
+                print("\(receivedSearchedPhotoArray.count) photos was added to table view")
                 searchedPhotoArray += receivedSearchedPhotoArray
                 // Now we have portion of photo objects and can set number of cells and cell height
                 self.tableView.reloadData()
@@ -123,6 +124,8 @@ class PhotoTableViewController: UIViewController, UITableViewDataSource, UITable
         if searchedPhoto.photoCutSize != nil {
             photoCell.activityIndicator.stopAnimating()
             photoCell.imageView?.image = searchedPhoto.photoCutSize
+            photoCell.imageView?.layer.cornerRadius = 10.0
+            photoCell.imageView?.layer.masksToBounds = true
         }
         
         return photoCell
